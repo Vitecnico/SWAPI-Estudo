@@ -1,16 +1,16 @@
-
 const body = document.querySelector("body")
-const span = document.querySelector("span")
 
 
 
 body.onclick = function(event){
-  console.log(event.target);
-  const modal = document.querySelector("#myModal")
-  if(event.target.nodeName === "BUTTON"){
+  const clique = event.target
+
+  if(clique.nodeName === "BUTTON"){
+    const modal = clique.previousSibling
     modal.style.display = "block"
   }
-  if(event.target.nodeName === "SPAN"){
+  if(clique.nodeName === "SPAN"){
+    const modal = clique.parentNode.parentNode
     modal.style.display = "none";
   }
   
