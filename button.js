@@ -5,11 +5,13 @@ const span = document.querySelector("span")
 
 
 body.onclick = function(event){
+  console.log(event.target);
+  const modal = document.querySelector("#myModal")
   if(event.target.nodeName === "BUTTON"){
-    span.style.display = "block"
+    modal.style.display = "block"
   }
   if(event.target.nodeName === "SPAN"){
-    span.style.display = "none";
+    modal.style.display = "none";
   }
   
 }
