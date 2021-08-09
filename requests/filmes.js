@@ -1,8 +1,10 @@
 const Conteudo = (numeroFilme,diretor,date) => `<button id="myBtn"><h1 class="titulox">${numeroFilme}</h1><h2>Diretor: ${diretor}<h2> <h3>criado em :${date}</h3></button> `;
 const UrlPlanets = (data) => `
-        <p>${data.name}</p>
-        <p>${data.climate}</p>
-        <p>${data.population}</p>`;
+<div class = "planeta">
+        <p>Planeta ${data.name}</p>
+        <p>Clima ${data.climate}</p>
+        <p>Numero de Habitantes ${data.population}</p>
+</div>`
 
 const requestPlanetas = (url,film) => {
     return axios.get(url).then((res) => {
